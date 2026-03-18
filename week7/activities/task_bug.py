@@ -12,25 +12,22 @@ import pdb
 # import os
 
 def add_task(tasks, task):
-    # pdb.set_trace()
+    breakpoint()
     task.append((task, False))
 
 def mark_task_completed(tasks, index):
-    # pdb.set_trace()
     if 0 <= index < len(tasks):
         tasks[index] = True 
     else:
         print("Invalid task index.")
 
 def delete_task(tasks, index):
-    # pdb.set_trace()
     if 0 <= index < len(tasks):
         tasks.remove(tasks[index]) 
     else:
         print("Invalid task index.")
 
 def list_tasks(tasks):
-    # pdb.set_trace()
     if not tasks:
         print("No tasks available.")
         return
@@ -39,7 +36,6 @@ def list_tasks(tasks):
         print(f"{index}. {'[X]' if task else '[ ]'} {task[0]}") 
 
 def sort_tasks(tasks):
-    # pdb.set_trace()
     tasks.sort(key=lambda x: x[0])
 
 def binary_search(tasks, target):
@@ -55,8 +51,8 @@ def binary_search(tasks, target):
     return -1
 
 def main():
-    # pdb.set_trace()
     tasks = []
+    breakpoint()
 
     while True:
         print("\n1. Add Task")

@@ -1,3 +1,4 @@
+import pdb;
 # example 1
 # filename = __file__
 # breakpoint()
@@ -54,7 +55,7 @@
 # w: check the stack
 # b: set a breakpoint
 # Use up & down
-import pdb;
+
 def function_a(first_number, second_number):
     result_of_addition = first_number + second_number
     print(f"In function_a: first_number = {first_number}, second_number = {second_number}, result_of_addition = {result_of_addition}")

@@ -8,7 +8,7 @@ import traceback
 # logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configuring logging to write to a file
-# logging.basicConfig(filename='./logs/_app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='_app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Logging levels
 # logging.debug("This is a debug message")
@@ -50,7 +50,7 @@ def process_numbers(numbers):
         
         return modified
     except Exception as e:
-        logging.error(f"Error processing numbers: {e}")
+        # logging.error(f"Error processing numbers: {e}")
         traceback.print_exc()
         return None
 
@@ -60,9 +60,9 @@ numbers = [5, -3, 2, -8, 7, 10, -1, 0]
 
 try:
     result = process_numbers(numbers)
-    # log_message(f"Final result: {result}") # change to incorrect variable name
+    log_message(f"Final result: {result}") # change to incorrect variable name
 except Exception as error:
-    logging.error(f"An unexpected error occurred: {error}")
+    # logging.error(f"An unexpected error occurred: {error}")
     traceback.print_exc()
     traceback_string = traceback.format_exc()
-    logging.error("Unhandled exception: %s\n%s", error, traceback_string)
+    # logging.error("Unhandled exception: %s\n%s", error, traceback_string)
