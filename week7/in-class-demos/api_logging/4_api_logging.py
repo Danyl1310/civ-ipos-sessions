@@ -20,8 +20,8 @@ API_KEY = 'd5b5ea4324fe1fe5f575e96a650deac0'  # Replace with your actual API key
 def get_weather(lat, lon):
     """Fetches weather data for the specified latitude and longitude."""
     try:
-        url = f"https://api.openweathermap.org/data/2.5/weatr?lat={lat}&lon={lon}&appid={API_KEY}&units=metric"
-        # url = f"https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API_KEY}"
+        # url = f"https://api.openweathermap.org/data/2.5/weatr?lat={lat}&lon={lon}&appid={API_KEY}&units=metric"
+        url = f"https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API_KEY}"
         logging.debug(f"Requesting weather data for coordinates: lat={lat}, lon={lon}")
         response = requests.get(url)
         response.raise_for_status()  # Raises an HTTPError for bad responses
