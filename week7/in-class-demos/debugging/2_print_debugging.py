@@ -8,7 +8,7 @@ import traceback
 # logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Configuring logging to write to a file
-logging.basicConfig(filename='_app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='_app_print.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Logging levels
 # logging.debug("This is a debug message")
