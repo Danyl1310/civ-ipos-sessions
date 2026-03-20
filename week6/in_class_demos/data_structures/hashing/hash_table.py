@@ -57,7 +57,6 @@ print(hash_table)
 
 print("Value for key 'a':", hash_table.get('a'))  # Output: Value for key 'a': 7
 print("Value for key 'c':", hash_table.get('c'))  # Output: Value for key 'c': 2
-
-# PLace breakpoint and rerun to see duplicated values
+# Place breakpoint and rerun to see duplicated values
 hash_table.remove('b')
 print("Value for key 'b' after removal:", hash_table.get('b'))  # Output: Value for key 'b' after removal: None
