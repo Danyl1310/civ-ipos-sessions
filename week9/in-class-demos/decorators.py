@@ -20,5 +20,5 @@ def logger(func):
 def greet(name, key):
     print(f"Hi, {name}")
 
-# greet("Robbo", 'firstname')
-greet(name="Robbo", key="firstname", name2="Robbo", key2="firstname")
+greet("Johns Tuple", 'firstname')
+greet(name="Johns Dictionary", key="firstname",)

@@ -22,8 +22,11 @@ In your group **analyse the requirements**. For each, decide which pattern or te
 
 ---
 
+**Using the in class demos as building blocks**
+
 ### Step 1: User Creation
 
+- Create a base repo and share between the group
 - Create a base class `User` and subclasses `Admin`, `Editor`, `Viewer`
 - Write a `create_user(type, name)` function
 
