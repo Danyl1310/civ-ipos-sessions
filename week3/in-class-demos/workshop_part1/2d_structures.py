@@ -1,16 +1,13 @@
 # Exercise 1a: manually create a 2D data structure
 
-# my_2dim_list = [
-#     [0, 1, 2],
-#     [3, 4, 5],
-#     [6, 7, 8]
-# ]
+# 2d_list = [[0,1,2],[3,4,5],[6,7,8]]
 
 # Random access
-# print(my_2dim_list[0])
-# print(my_2dim_list[1][2])
 
-print('#'*20)
+# print(2d_list[0])
+# print(2d_list[1][2])
+
+# print('#'*20)
 
 # Exercise 1b: Be careful when creating 2D data structures using multiplication
 
