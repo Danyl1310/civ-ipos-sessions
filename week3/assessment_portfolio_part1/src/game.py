@@ -24,7 +24,9 @@ class Game(Checker):
         self.reset_game()
         print(f"Player {self.active_player} is going first.. ")
         # Game Loop
+        self.toggle()
         while not self.win_check(self.board, self.active_player):
+            self.toggle()
             self.print_board()
             while True:
                 try:
@@ -33,12 +35,7 @@ class Game(Checker):
                     print("Invalid Input")
                     continue
                 else:
-                    toggle = {
-                        self.p1:self.p2,
-                        self.p2:self.p1
-                    }
                     if self._input_check(num_input, self.board, self.active_player):
-                        self.active_player = toggle[self.active_player]
                         break
                     else:
                         print("Invalid Input")
@@ -49,3 +46,10 @@ class Game(Checker):
             for j in i:
                 print(f"| {j}", end=" ")
             print("|\n", end="")
+
+    def toggle(self):
+        toggle = {
+            self.p1: self.p2,
+            self.p2: self.p1
+        }
+        self.active_player = toggle[self.active_player]
