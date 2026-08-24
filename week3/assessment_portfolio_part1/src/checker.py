@@ -1,9 +1,10 @@
 from idlelib.configdialog import is_int
 import math
+from operator import truediv
+
 
 class Checker:
     def __init__(self):
-        self.__finished = False
         self.__coords = []
 
     def analyse_board(self, board, player):
@@ -18,24 +19,28 @@ class Checker:
         self.analyse_board(board, player)
         number = len(board)
         #Straight Lines
-        x_count = 0
-        y_count = 0
-        for i, (x, y) in enumerate(self.__coords):
-            if x == self.__coords[i-1][0]:
-                x_count += 1
-            else:
-                x_count = 0
-            if y == self.__coords[i-1][0]:
-                y_count += 1
-            else:
-                y_count = 0
-            if x_count == number or y_count == number:
-                return True
+        x_coords = {}
+        y_coords = {}
+        #debug
+        print(self.__coords)
+        #Counts Coords
+        for i, coord in enumerate(self.__coords):
+            if coord[0] not in y_coords:
+                y_coords.update({coord[0]: 1})
+            elif coord[0] in y_coords:
+                y_coords[coord[0]] += 1
+            if coord[1] not in x_coords:
+                x_coords.update({coord[1]: 1})
+            elif coord[1] in x_coords:
+                x_coords[coord[1]] += 1
+        print(f"X: {x_coords}, Y: {y_coords}")
+        if 3 in x_coords.values() or 3 in y_coords.values():
+            return True
         #Diagonals
         return False
 
     @staticmethod
-    def _input_check(user_input, board, player):
+    def input_check(user_input, board, player):
         available_numbers = []
         for row in board:
             for value in row:
