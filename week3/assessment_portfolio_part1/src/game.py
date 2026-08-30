@@ -53,9 +53,15 @@ class Game:
 
 
     def print_board(self):
+        spaces = len(str(self.size ^ 2))
         for i in self.board:
             for j in i:
-                print(f"| {j}", end=" ")
+                if len(str(j)) != spaces:
+                    print(f"| {j}", end=" ")
+                else:
+                    delta = spaces - (len(str(j)) - 1)
+                    newspace = int(spaces - delta)
+                    print("|", " "*newspace, str(j), end=" ")
             print("|\n", end="")
 
     def toggle(self):

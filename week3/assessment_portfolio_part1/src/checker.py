@@ -35,7 +35,7 @@ class Checker:
         #Debugs coords
         #print(f"X: {x_coords}, Y: {y_coords}")
         #Straight Lines
-        if 3 in x_coords.values() or 3 in y_coords.values():
+        if int(number) in x_coords.values() or int(number) in y_coords.values():
             return True
         #Diagonals
         if len(x_coords) == len(y_coords) and len(x_coords) == number:
