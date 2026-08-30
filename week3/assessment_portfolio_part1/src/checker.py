@@ -18,11 +18,10 @@ class Checker:
     def win_check(self, board, player):
         self.analyse_board(board, player)
         number = len(board)
-        #Straight Lines
         x_coords = {}
         y_coords = {}
         #debug
-        print(self.__coords)
+        #print(self.__coords)
         #Counts Coords
         for i, coord in enumerate(self.__coords):
             if coord[0] not in y_coords:
@@ -33,10 +32,14 @@ class Checker:
                 x_coords.update({coord[1]: 1})
             elif coord[1] in x_coords:
                 x_coords[coord[1]] += 1
-        print(f"X: {x_coords}, Y: {y_coords}")
+        #Debugs coords
+        #print(f"X: {x_coords}, Y: {y_coords}")
+        #Straight Lines
         if 3 in x_coords.values() or 3 in y_coords.values():
             return True
         #Diagonals
+        if len(x_coords) == len(y_coords) and len(x_coords) == number:
+            return True
         return False
 
     @staticmethod
