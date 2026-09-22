@@ -81,7 +81,7 @@ Once you've set up either `setup.py` or `pyproject.toml` correctly, you can buil
 - **For setuptools:**
 
   ```bash
-  python setup.py bdist_wheel
+  python main.py bdist_wheel
   ```
 
 - **For Poetry:**
