@@ -39,7 +39,7 @@ class Checker:
             return True
         #Diagonals
         if len(x_coords) == len(y_coords) and len(x_coords) == number:
-            if "X" in board[1][1]:
+            if player in board[1][1]:
                 return True
         return False
 
