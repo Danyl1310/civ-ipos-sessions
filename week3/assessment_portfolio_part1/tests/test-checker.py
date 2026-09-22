@@ -15,3 +15,7 @@ class TestChecker(unittest.TestCase):
         self.assertEqual(False, self.checker.input_check("L", self.board, "X"))
         self.assertEqual(False, self.checker.input_check(9, self.board, "O"))
         self.assertEqual(False, self.checker.input_check(-1, self.board, "X"))
+
+    def test_win(self):
+        self.board = [["X", "X", "〇"], ["〇", "〇", "X"], ["X", 7, 8]]
+        self.assertEqual(False, self.checker.win_check(self.board,"X"))
